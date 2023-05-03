@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Create ups</title>
+</head>
+<body>
+    <form>
+        <label>
+            <div>Введите название ИБП</div>
+            <input type="text">
+            <div>Выберите ФИО ответственного лица</div>
+            <select name="persons">
+                <option value="0">Никто</option>
+                <option th:each="person : ${persons}" th:value="${person}" th:text="${person}"></option>
+            </select>
+            <div>Выберите местоположение</div>
+            <select name="locations">
+                <option value="0">Нигде</option>
+                <option th:each="location : ${locations}" th:value="${location}" th:text="${location}"></option>
+            </select>
+            <div>Выберите статус эксплуатации</div>
+            <select name="statuses">
+                <option th:each="status : ${statuses}" th:value="${status}" th:text="${status}"></option>
+            </select>
+        </label>
+    </form>
+</body>
+</html>
