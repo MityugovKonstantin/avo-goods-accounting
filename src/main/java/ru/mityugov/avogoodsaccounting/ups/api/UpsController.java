@@ -14,13 +14,8 @@ import java.util.List;
 import java.util.Map;
 
 @Controller
-@RequestMapping(path = "/ups")
+@RequestMapping(path = "/avo/ups")
 public class UpsController {
-
-    @GetMapping()
-    public String index(Model model) {
-        return "index";
-    }
 
     @GetMapping(path = "/create")
     public String create(Model model) {
@@ -42,12 +37,15 @@ public class UpsController {
         model.addAttribute("persons", persons);
         model.addAttribute("locations", locations);
         model.addAttribute("statuses", statuses);
+        model.addAttribute("ups", new Ups());
 
         return "create_ups";
     }
 
-    @PostMapping()
-    public void add(Ups ups) {
-
+    @PostMapping("/create")
+    public String add(Ups ups) {
+        System.out.println("Создана запись: ");
+        System.out.println(ups.toString());
+        return "index";
     }
 }

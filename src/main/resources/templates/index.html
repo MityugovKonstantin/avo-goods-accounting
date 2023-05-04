@@ -1,12 +1,40 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head>
-    <meta charset="UTF-8">
-    <title>Main</title>
-</head>
+    <html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+    <head>
+
+        <meta charset="UTF-8">
+        <title>Учёт ИБП</title>
+        <link rel="stylesheet" href="style.css">
+
+    </head>
+
     <body>
-        <form action="/ups/create" method="get">
-            <button>Создать запись о ИБП</button>
-        </form>
+
+        <div>Выберите действие по учёту ИБП:</div>
+
+        <div>
+            <form action="" method="get">
+                <input type="submit" value="Вывести список ИБП"/>
+            </form>
+
+            <form action="/avo/ups/create" method="get">
+                <input type="submit" value="Создать запись о ИБП"/>
+            </form>
+        </div>
+
+        <div>
+            <form action="" method="get">
+                <input type="submit" value="Добавить ответственное лицо"/>
+            </form>
+        </div>
+
+        <div>
+            <form action="" method="get">
+                <input type="submit" value="Добавить запись о местоположении"/>
+            </form>
+        </div>
+
     </body>
+
 </html>

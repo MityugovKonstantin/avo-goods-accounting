@@ -1,27 +1,35 @@
 package ru.mityugov.avogoodsaccounting.ups.models;
 
+import lombok.Data;
+import org.springframework.beans.factory.annotation.Value;
+
+@Data
 public class Ups {
 
     String name;
 
-    int responsiblePersonId;
+    String person;
 
-    int locationId;
+    String location;
 
-    Long startDate;
-
-    String exploitationStatus;
-
-    String technicalCondition;
+    String operationStatus;
 
     Long amortizationPeriod;
-
-    Long registrationDate;
-
-    Long writeOffDate;
 
     int power;
 
     int maxRunTime;
 
+    @Override
+    public String toString() {
+        return "Ups{" +
+                "name='" + name + '\'' +
+                ", person='" + person + '\'' +
+                ", location='" + location + '\'' +
+                ", operationStatus='" + operationStatus + '\'' +
+                ", amortizationPeriod=" + amortizationPeriod +
+                ", power=" + power +
+                ", maxRunTime=" + maxRunTime +
+                '}';
+    }
 }

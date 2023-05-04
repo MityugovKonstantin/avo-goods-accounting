@@ -1,29 +1,71 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head>
-    <meta charset="UTF-8">
-    <title>Create ups</title>
-</head>
-<body>
-    <form>
-        <label>
-            <div>Введите название ИБП</div>
-            <input type="text">
-            <div>Выберите ФИО ответственного лица</div>
-            <select name="persons">
-                <option value="0">Никто</option>
-                <option th:each="person : ${persons}" th:value="${person}" th:text="${person}"></option>
-            </select>
-            <div>Выберите местоположение</div>
-            <select name="locations">
-                <option value="0">Нигде</option>
-                <option th:each="location : ${locations}" th:value="${location}" th:text="${location}"></option>
-            </select>
-            <div>Выберите статус эксплуатации</div>
-            <select name="statuses">
-                <option th:each="status : ${statuses}" th:value="${status}" th:text="${status}"></option>
-            </select>
-        </label>
-    </form>
-</body>
+    <html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+    <head>
+
+        <meta charset="UTF-8">
+        <title>Создание записи ИБП</title>
+        <link rel="stylesheet" href="style.css">
+
+    </head>
+
+    <body>
+
+        <form action="/avo/ups/create" th:object="${ups}" method="post">
+
+            <label>Введите название ИБП (минимум 5 символов): <input type="text" minlength="5" th:field="*{name}"></label>
+
+            <br>
+            <br>
+
+            <label>Выберите ФИО ответственного лица:
+                <select name="persons" th:field="*{person}">
+                    <option value="0">Никто</option>
+                    <option th:each="person : ${persons}" th:value="${person}" th:text="${person}"></option>
+                </select>
+            </label>
+
+            <br>
+            <br>
+
+            <label>Выберите местоположение:
+                <select name="locations" th:field="*{location}">
+                    <option value="0">Нигде</option>
+                    <option th:each="location : ${locations}" th:value="${location}" th:text="${location}"></option>
+                </select>
+            </label>
+
+            <br>
+            <br>
+
+            <label>Выберите статус эксплуатации:
+                <select name="statuses" th:field="*{operationStatus}">
+                    <option th:each="status : ${statuses}" th:value="${status}" th:text="${status}"></option>
+                </select>
+            </label>
+
+            <br>
+            <br>
+
+            <label>Укажите срок амортизации: <input type="number" min="0" th:field="*{amortizationPeriod}"/> мес</label>
+
+            <br>
+            <br>
+
+            <label>Укажите мощность: <input type="number" min="1" th:field="*{power}"> Вт</label>
+
+            <br>
+            <br>
+
+            <label>Укажите максимальный срок работы: <input type="number" min="1" th:field="*{maxRunTime}"/> час</label>
+
+            <br>
+            <br>
+
+            <input type="submit" value="Добавить запись"/>
+
+        </form>
+
+    </body>
+
 </html>
