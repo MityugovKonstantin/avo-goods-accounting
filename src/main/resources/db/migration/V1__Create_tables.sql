@@ -21,6 +21,7 @@ CREATE TABLE operation_status (
 );
 
 CREATE TABLE ups (
+    id SERIAL PRIMARY KEY NOT NULL ,
     name VARCHAR NOT NULL ,
     person_id int REFERENCES person (id),
     location_id int REFERENCES location (id),
