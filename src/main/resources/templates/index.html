@@ -5,34 +5,44 @@
 
         <meta charset="UTF-8">
         <title>Учёт ИБП</title>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" type="text/css" href="style.css">
 
     </head>
 
     <body>
+        <div class="background1">
+            <div class="header"><h3>Выберите действие по учёту ИБП</h3></div>
+            <div class="row_container">
 
-        <div>Выберите действие по учёту ИБП:</div>
+                <div class="column_container">
+                    <form action="" method="get">
+                        <div class="button"><input type="submit" value="Вывести полный список ИБП"/></div>
+                    </form>
 
-        <div>
-            <form action="" method="get">
-                <input type="submit" value="Вывести список ИБП"/>
-            </form>
+                    <form action="" method="get">
+                        <div class="button"><input type="submit" value="Вывести полный список ответственных лиц"/></div>
+                    </form>
 
-            <form action="/avo/ups/create" method="get">
-                <input type="submit" value="Создать запись о ИБП"/>
-            </form>
-        </div>
+                    <form action="" method="get">
+                        <div class="button"><input type="submit" value="Вывести полный список местоположений"/></div>
+                    </form>
 
-        <div>
-            <form action="" method="get">
-                <input type="submit" value="Добавить ответственное лицо"/>
-            </form>
-        </div>
+                </div>
 
-        <div>
-            <form action="" method="get">
-                <input type="submit" value="Добавить запись о местоположении"/>
-            </form>
+                <div class="column_container">
+                    <form action="/avo/ups/create" method="get">
+                        <div class="button"><input type="submit" value="Добавить ИБП"/></div>
+                    </form>
+
+                    <form action="" method="get">
+                        <div class="button"><input type="submit" value="Добавить ответственное лицо"/></div>
+                    </form>
+
+                    <form action="" method="get">
+                        <div class="button"><input type="submit" value="Добавить местоположение"/></div>
+                    </form>
+                </div>
+            </div>
         </div>
 
     </body>

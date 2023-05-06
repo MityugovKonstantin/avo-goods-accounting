@@ -1,3 +1,26 @@
-button {
+.column_container {
+    flex-direction: column;
+    display: flex;
+}
+
+.row_container {
+    flex-direction: row;
+    display: flex;
+}
+
+.button {
     margin: 8px;
+}
+
+.background1 {
+    margin: 8px;
+    padding: 8px;
+    width: 550px;
+    border: solid;
+    border-radius: 5px;
+    background-color: aliceblue;
+}
+
+.header {
+    text-align: center;
 }
