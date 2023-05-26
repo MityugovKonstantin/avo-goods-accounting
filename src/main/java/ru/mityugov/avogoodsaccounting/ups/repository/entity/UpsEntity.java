@@ -15,6 +15,8 @@ public class UpsEntity {
 
     String name;
 
+    String manufacture;
+
     int personId;
 
     int locationId;

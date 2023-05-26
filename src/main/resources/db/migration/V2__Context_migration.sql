@@ -22,17 +22,17 @@ VALUES (1, 'Юрий', 'Гриценко', 'Борисович', 'Доцент')
             (3, 'Анна ', 'Исакова', 'Ивановна', 'Доцент');
 
 -- filling the ups table
-INSERT INTO ups (id, name, person_id,
+INSERT INTO ups (id, name, manufacturer, person_id,
                      location_id, commissioning_date,
                      operation_status, technical_condition,
                      amortization_period, registration_date,
                      writeoff_date, power, max_run_time)
-VALUES  (1, 'CyberPower UT650EG', 1,
+VALUES  (1, 'UT650EG', 'CyberPower', 1,
             1, TO_DATE('12/09/2022', 'DD/MM/YYYY'),
             'эксплуатируется', 'работает',
             5, TO_DATE('12/07/2022', 'DD/MM/YYYY'),
             null, 14, 4),
-        (2, 'CYBERPOWER UTC650E', 2,
+        (2, 'CYBERPOWER UTC650E', 'CyberPower', 2,
             2, TO_DATE('12/09/2022', 'DD/MM/YYYY'),
             'эксплуатируется', 'работает',
             5, TO_DATE('12/07/2022', 'DD/MM/YYYY'),

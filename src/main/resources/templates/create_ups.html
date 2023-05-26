@@ -16,29 +16,38 @@
         <form action="/avo/ups/create" th:object="${ups}" method="post">
             <div class="row_container">
                 <div class="column_container">
-                    <div class="txt">Введите название ИБП (минимум 5 символов):</div>
-                    <div class="txt">Выберите ФИО ответственного лица:</div>
-                    <div class="txt">Выберите местоположение (корпус и кабинет):</div>
-                    <div class="txt">Выберите статус эксплуатации:</div>
-                    <div class="txt">Укажите срок амортизации:</div>
+                    <div class="txt">Введите название:</div>
+                    <div class="txt">Введите производителя:</div>
                     <div class="txt">Укажите мощность:</div>
                     <div class="txt">Укажите максимальный срок работы:</div>
+                    <div class="txt">Выберите ответственное лицо:</div>
+                    <div class="txt">Выберите местоположение:</div>
+                    <div class="txt">Выберите статус эксплуатации:</div>
+                    <div class="txt">Укажите срок амортизации:</div>
                 </div>
 
                 <div class="column_container">
-                    <div class="input"><input type="text" minlength="5" th:field="*{name}"></div>
+                    <div class="input"><input type="text" minlength="5" th:field="*{name}" value="Фристайл 1500 ВА"></div>
+                    <div class="input"><input type="text" minlength="1" th:field="*{manufacture}" value="ИМПУЛЬС"></div>
+                    <div class="input"><input type="number" min="1" th:field="*{power}" value="1"></div>
+                    <div class="input"><input type="number" min="1" th:field="*{maxRunTime}"value="13"/></div>
                     <div class="select">
                         <select name="persons" th:field="*{person}">
-                            <option th:each="person : ${persons}" th:value="${person}" th:text="${person}"></option>
+                            <option value="1">Исакова Анна Ивановна</option>
+                            <option value="2">Катаев Михаил Юрьевич</option>
+                            <option value="3">Мицель Артур Александрович</option>
                         </select>
                     </div>
                     <div class="select">
                         <select name="building" th:field="*{location}">
-                            <option th:each="location : ${locations}" th:value="${location}" th:text="${location}"></option>
+                            <option value="1">РК</option>
+                            <option value="2">ФЭТ</option>
+                            <option value="3">УЛК</option>
                         </select>
-
                         <select name="cabinet">
-                            <option th:each="location : ${locations}" th:value="${location}" th:text="${location}"></option>
+                            <option value="1">419</option>
+                            <option value="2">421</option>
+                            <option value="3">402</option>
                         </select>
                     </div>
                     <div class="select">
@@ -46,9 +55,7 @@
                             <option th:each="status : ${statuses}" th:value="${status}" th:text="${status}"></option>
                         </select>
                     </div>
-                    <div class="input"><input type="number" min="0" th:field="*{amortizationPeriod}"/></div>
-                    <div class="input"><input type="number" min="1" th:field="*{power}"></div>
-                    <div class="input"><input type="number" min="1" th:field="*{maxRunTime}"/></div>
+                    <div class="input"><input type="number" min="0" th:field="*{amortizationPeriod}" value="15"/></div>
                 </div>
             </div>
             <div><input class="button" type="submit" value="Добавить запись"/></div>

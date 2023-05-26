@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+  <meta charset="UTF-8">
+  <title>Создание записи о местоположении</title>
+  <link th:href="@{/css/style.css}" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="background_panel">
+  <div class="header"><h3>Создание записи о местоположении</h3></div>
+  <form action="/avo/ups/create" th:object="${ups}" method="post">
+    <div class="row_container">
+      <div class="column_container">
+        <div class="txt">Введите номер кабинета:</div>
+        <div class="txt">Введите корпус:</div>
+      </div>
+
+      <div class="column_container">
+        <div class="input"><input type="text" value="УЛК"></div>
+        <div class="input"><input type="text" value="433"></div>
+      </div>
+    </div>
+    <div><input class="button" type="submit" value="Добавить запись"/></div>
+  </form>
+  <div>
+    <form action="/avo" th:object="${ups}" method="get">
+      <input class="button" type="submit" value="Назад">
+    </form>
+  </div>
+</div>
+</body>
+
+</html>

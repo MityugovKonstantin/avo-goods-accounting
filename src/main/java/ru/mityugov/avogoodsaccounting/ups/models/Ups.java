@@ -7,6 +7,8 @@ public class Ups {
 
     String name;
 
+    String manufacture;
+
     String person;
 
     String location;

@@ -45,8 +45,11 @@ public class UpsController {
 
     @PostMapping("/create")
     public String add(Ups ups) {
-        System.out.println("Создана запись: ");
-        System.out.println(ups.toString());
         return "index";
+    }
+
+    @GetMapping("/show")
+    public String showList() {
+        return "list_ups";
     }
 }
