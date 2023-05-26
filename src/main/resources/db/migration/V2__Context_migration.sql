@@ -8,11 +8,12 @@ VALUES ('эксплуатируется'), ('списан'), ('в ремонте
 
 -- filling the location table
 INSERT INTO location (id, cabinet, building)
-VALUES (1, '401', 'ФЭТ'),
-            (2, '301', 'ФЭТ'),
-            (3, '201', 'ФЭТ'),
-            (4, '101', 'РК'),
-            (5, '201', 'ГК');
+VALUES (1, '', 'СКЛАД'),
+            (2, '401', 'ФЭТ'),
+            (3, '301', 'ФЭТ'),
+            (4, '201', 'ФЭТ'),
+            (5, '101', 'РК'),
+            (6, '201', 'ГК');
 
 -- filling the person table
 INSERT INTO person (id, first_name, second_name, patronymic, job_title)
