@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+  <meta charset="UTF-8">
+  <title>Изменение записи об ИБП</title>
+  <link href="style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="background_panel">
+  <div class="header"><h3>Изменение записи об ИБП</h3></div>
+  <form action="/avo/ups/create" th:object="${ups}" method="post">
+    <div class="row_container">
+      <div class="column_container">
+        <div class="txt">Название:</div>
+        <div class="txt">Производитель:</div>
+        <div class="txt">Мощность:</div>
+        <div class="txt">Максимальный срок работы:</div>
+        <div class="txt">Ответственное лицо:</div>
+        <div class="txt">Местоположение:</div>
+        <div class="txt">Дата ввода в эксплуатацию:</div>
+        <div class="txt">Статус эксплуатации:</div>
+        <div class="txt">Состояние:</div>
+        <div class="txt">Срок амортизации:</div>
+        <div class="txt">Дата регистрации:</div>
+        <div class="txt">Дата списания:</div>
+      </div>
+
+      <div class="column_container">
+        <div class="input"><input type="text" minlength="5" value="UT650EG"></div>
+        <div class="input"><input type="text" minlength="1" value="CyberPower"></div>
+        <div class="input"><input type="number" min="1" value="14"></div>
+        <div class="input"><input type="number" min="1" value="4"/></div>
+        <div class="select">
+          <select name="persons">
+            <option value="1">Юрий Гриценко Борисович</option>
+            <option value="2">Александр Суханов Яковлевич</option>
+            <option value="3">Анна Исакова Ивановна</option>
+          </select>
+        </div>
+        <div class="select">
+          <select name="building">
+            <option value="1">СКЛАД</option>
+          </select>
+        </div>
+        <div class="input"><input type="date"></div>
+        <div class="select">
+          <select name="statuses">
+            <option value="1">эксплуатируется</option>
+            <option value="2">списан</option>
+            <option value="3">в ремонте</option>
+            <option value="4">на складе</option>
+          </select>
+        </div>
+        <div class="select">
+          <select name="conditional" >
+            <option value="1">работает</option>
+            <option value="2">не работает</option>
+          </select>
+        </div>
+        <div class="input"><input type="number" min="0" value="15"/></div>
+        <div class="input"><input type="date"></div>
+        <div class="input"><input type="date"></div>
+      </div>
+    </div>
+    <div><input class="button" type="submit" value="Изменить запись"/></div>
+  </form>
+  <div>
+    <form action="/avo" th:object="${ups}" method="get">
+      <input class="button" type="submit" value="Назад">
+    </form>
+  </div>
+</div>
+</body>
+
+</html>

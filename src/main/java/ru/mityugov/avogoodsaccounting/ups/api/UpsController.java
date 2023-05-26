@@ -52,4 +52,9 @@ public class UpsController {
     public String showList() {
         return "list_ups";
     }
+
+    @GetMapping("/change_ups")
+    public String showChange() {
+        return "change_ups";
+    }
 }

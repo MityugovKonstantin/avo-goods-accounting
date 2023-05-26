@@ -28,9 +28,8 @@
 }
 
 .background_panel {
-    margin: 8px;
     padding: 8px;
-    width: 550px;
+    width: 100%;
     border: solid;
     border-radius: 5px;
     background-color: aliceblue;
@@ -55,4 +54,8 @@
 .table td {
     border: 1px solid #dddddd;
     padding: 5px;
+}
+
+body {
+    margin: 0;
 }
