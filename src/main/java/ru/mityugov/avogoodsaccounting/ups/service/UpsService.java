@@ -6,4 +6,5 @@ public interface UpsService {
 
     void create(Ups ups);
 
+    Ups[] get();
 }

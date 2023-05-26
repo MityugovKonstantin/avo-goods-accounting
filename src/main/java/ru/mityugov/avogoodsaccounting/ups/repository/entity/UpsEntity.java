@@ -7,7 +7,7 @@ import jakarta.persistence.Table;
 import java.sql.Date;
 
 @Entity
-@Table(name = "---")
+@Table(name = "ups")
 public class UpsEntity {
 
     @Id
@@ -15,7 +15,7 @@ public class UpsEntity {
 
     String name;
 
-    int responsiblePersonId;
+    int personId;
 
     int locationId;
 
