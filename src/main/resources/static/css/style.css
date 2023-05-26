@@ -12,7 +12,22 @@
     margin: 8px;
 }
 
-.background1 {
+.input {
+    margin: 8px;
+    height: 10px;
+}
+
+.select {
+    margin: 8px;
+    height: 10px;
+}
+
+.txt {
+    margin: 8px;
+    height: 10px;
+}
+
+.background_panel {
     margin: 8px;
     padding: 8px;
     width: 550px;
